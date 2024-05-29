@@ -35,7 +35,7 @@ function App() {
       .catch((err) => console.log(err))
   }
 
-  console.log(forecast)
+  // console.log(forecast)
 
   return (
     <div className="container">
