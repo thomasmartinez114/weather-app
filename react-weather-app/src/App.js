@@ -42,7 +42,7 @@ function App() {
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {/*if theres currentWeather data then show */}
-      <Forecast />
+      {forecast && <Forecast data={forecast} />}
     </div>
   )
 }
