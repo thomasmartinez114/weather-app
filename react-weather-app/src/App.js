@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "./App.css"
 import Search from "./components/search/search"
+import Forecast from "./components/forecast/forecast"
 import CurrentWeather from "./components/current-weather/current-weather"
 import { WEATHER_API_KEY, WEATHER_API_URL } from "./api"
 
@@ -34,7 +35,6 @@ function App() {
       .catch((err) => console.log(err))
   }
 
-  console.log(currentWeather)
   console.log(forecast)
 
   return (
@@ -42,6 +42,7 @@ function App() {
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {/*if theres currentWeather data then show */}
+      <Forecast />
     </div>
   )
 }
